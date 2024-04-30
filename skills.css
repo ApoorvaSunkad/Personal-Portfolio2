@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: #fff;
+    font-family: "Mukta", sans-serif;
+}
+
+h1{
+    text-align: left;
+    font-family: "Mukta", sans-serif;
+    font-size: 2.8rem;
+    margin-top:5%;
+    margin-left: 10%;
+}
+#bio{
+    text-align: left;
+    font-family: "Mukta", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+.skills{
+    display: flex;
+    margin-top: 8%;
+    grid-gap: 40px;
+    margin-top: 10%;
+    margin-left: 15%;
+    align-items: center;
+    transition: transform 0.5s;
+}
+.skills img{
+    height: 100px;
+}
+.skills div{
+    background: #262626;
+    padding: 30px;
+    font-size: 10px;
+    font-weight: 300;
+    font-family: "Mukta",sans-serif; 
+    border-radius: 10px;
+}
+.skills div:hover{
+    transform: translateY(-5px);
+}
+.skill2{
+    margin-bottom: 10%;
+}
+.languages{
+    text-align: center;
+    font-family: "Mukta", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 10%;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav p{
+    font-size: 40px;
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    color: rgb(126, 121, 121);
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(126, 121, 121);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* Footer */
+.copyright{
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(93, 90, 90);
+    color: #fff;
+    margin-top: 30px;
+    font-weight: 300;
+    font-family: "Mukta", sans-serif;
+}
+.copyright i{
+    color: red;
+}
+nav .fa-solid{
+    display: none;
+    font-size: 25px;
+}
+
+/* Media Query */
+@media only screen and (max-width:600px){
+
+    nav p{
+        font-size: 30px;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    #bio{
+        font-size: 1rem;
+    }
+    .languages{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-left: 8%;
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .skills img{
+        height: 60px;
+    }
+    .skills div{
+        padding: 15px;
+    }
+    .copyright{
+        margin-top: 45%;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    /* For hiding menu */
+    nav ul{
+        background-color: rgb(126, 121, 121);
+        position: fixed;
+        top: 0;
+        /* -200px bcz to hide the menu and adding JS code for clicking
+        the menu */
+        right: -200px; 
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul li a{
+        font-size: 19px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .copyright{
+        font-size: 0.8rem;
+    }
+}
