@@ -27,24 +27,26 @@ h1{
 }
 .skills{
     display: flex;
-    margin-top: 8%;
-    grid-gap: 40px;
+    margin-top: 5%;
+    grid-gap: 50px;
     margin-top: 10%;
-    margin-left: 15%;
     align-items: center;
+    justify-content: center;
     transition: transform 0.5s;
 }
 .skills img{
-    height: 100px;
+    height: 110px;
+    border-radius: 50%;
+    margin-left: 10%;
 }
-.skills div{
+/* .skills div{
     background: #262626;
     padding: 30px;
     font-size: 10px;
     font-weight: 300;
     font-family: "Mukta",sans-serif; 
     border-radius: 10px;
-}
+} */
 .skills div:hover{
     transform: translateY(-5px);
 }
@@ -57,6 +59,15 @@ h1{
     font-size: 1.7rem;
     font-weight: 700;
     margin-top: 10%;
+}
+.names{
+    font-size: 1rem;
+    font-family: "Mukta", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12%;
+    margin-top: 2%;
 }
 .container{
     padding: 10px 10%;
